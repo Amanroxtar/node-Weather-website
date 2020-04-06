@@ -9,7 +9,7 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(body.cod==="400"){
             callback(body.message,undefined)
         }else{
-            callback(undefined,"Temperature is "+body.main.temp+" degress and status is "+body.weather[0].main)
+            callback(undefined,"Temperature is "+body.main.temp+" degress , Status is "+body.weather[0].description +" And Humidity is " +body.main.humidity+".")
         }   
     })
 }
